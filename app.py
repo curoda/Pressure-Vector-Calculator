@@ -81,3 +81,6 @@ if uploaded_file is not None:
     df_pressure_vector = pd.DataFrame({
         "Real Part of P": pressure_vector.real,
         "Imaginary Part of P": pressure_vector
+    })
+    st.write(df_pressure_vector)
+
