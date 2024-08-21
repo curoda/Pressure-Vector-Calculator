@@ -73,9 +73,11 @@ if uploaded_file is not None:
     st.write("### Matrix C (Hermitian of A)")
     st.write(pd.DataFrame(matrix_C))
 
+    # Display Matrix Z
+    st.write("### Matrix Z (A x B x C)")
+    st.write(pd.DataFrame(matrix_Z))
+
     st.write("### Pressure Vector P (Real and Imaginary parts)")
     df_pressure_vector = pd.DataFrame({
         "Real Part of P": pressure_vector.real,
-        "Imaginary Part of P": pressure_vector.imag
-    })
-    st.write(df_pressure_vector)
+        "Imaginary Part of P": pressure_vector
