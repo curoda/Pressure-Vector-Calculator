@@ -62,3 +62,20 @@ if uploaded_file is not None:
 
     # Display the chart
     st.pyplot(plt)
+
+    # Display Matrices A, B, C, and Pressure Vector P
+    st.write("### Matrix A")
+    st.write(pd.DataFrame(matrix_A))
+
+    st.write("### Matrix B")
+    st.write(pd.DataFrame(matrix_B))
+
+    st.write("### Matrix C (Hermitian of A)")
+    st.write(pd.DataFrame(matrix_C))
+
+    st.write("### Pressure Vector P (Real and Imaginary parts)")
+    df_pressure_vector = pd.DataFrame({
+        "Real Part of P": pressure_vector.real,
+        "Imaginary Part of P": pressure_vector.imag
+    })
+    st.write(df_pressure_vector)
