@@ -28,7 +28,7 @@ if uploaded_file is not None:
     # Calculate matrices A, B, C, Z, pressure vector, and arctangent values
     matrix_A = []
     for p, q in zip(p_values, q_values):
-        row = []
+        column = []
         for m, n in zip(m_values, n_values):
             term = (2 * np.pi / W) * (p * m + q * n)
             g_mnpq = np.cos(term) - 1j * np.sin(term)
