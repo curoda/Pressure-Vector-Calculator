@@ -34,7 +34,7 @@ if uploaded_file is not None:
             g_mnpq = np.cos(term) - 1j * np.sin(term)
             column.append(g_mnpq)
         matrix_A.append(column)
-    matrix_A = np.array(matrix_A)
+    matrix_A = np.array(matrix_A).T
 
     # Matrix C is the Hermitian of A
     matrix_C = np.conjugate(matrix_A).T
