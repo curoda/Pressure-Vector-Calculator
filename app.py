@@ -32,8 +32,8 @@ if uploaded_file is not None:
         for m, n in zip(m_values, n_values):
             term = (2 * np.pi / W) * (p * m + q * n)
             g_mnpq = np.cos(term) - 1j * np.sin(term)
-            row.append(g_mnpq)
-        matrix_A.append(row)
+            column.append(g_mnpq)
+        matrix_A.append(column)
     matrix_A = np.array(matrix_A)
 
     # Matrix C is the Hermitian of A
