@@ -18,12 +18,13 @@ if uploaded_file is not None:
     data = pd.read_excel(uploaded_file, sheet_name='Sheet1')
 
     # Extract the necessary columns from the uploaded file
-    m_values = data['Unnamed: 1'][1:].astype(float).values
-    n_values = data['Unnamed: 2'][1:].astype(float).values
-    p_values = data['Unnamed: 4'][1:].astype(float).values
-    q_values = data['Unnamed: 5'][1:].astype(float).values
-    V_values = data['Unnamed: 6'][1:].astype(float).values
-    velocity_vector = data['Unnamed: 3'][1:].astype(float).values
+    # Remove the [1:] to include the first row
+    m_values = data['Unnamed: 1'].astype(float).values
+    n_values = data['Unnamed: 2'].astype(float).values
+    p_values = data['Unnamed: 4'].astype(float).values
+    q_values = data['Unnamed: 5'].astype(float).values
+    V_values = data['Unnamed: 6'].astype(float).values
+    velocity_vector = data['Unnamed: 3'].astype(float).values
 
     # Calculate matrices A, B, C, Z, pressure vector, and arctangent values
     matrix_A = []
