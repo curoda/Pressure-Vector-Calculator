@@ -17,14 +17,13 @@ if uploaded_file is not None:
     # Step 3: Read the uploaded spreadsheet
     data = pd.read_excel(uploaded_file, sheet_name='Sheet1')
 
-    # Extract the necessary columns from the uploaded file
-    # Remove the [1:] to include the first row
-    m_values = data['Unnamed: 1'].astype(float).values
-    n_values = data['Unnamed: 2'].astype(float).values
-    p_values = data['Unnamed: 4'].astype(float).values
-    q_values = data['Unnamed: 5'].astype(float).values
-    V_values = data['Unnamed: 6'].astype(float).values
-    velocity_vector = data['Unnamed: 3'].astype(float).values
+    # Extract the necessary columns from the uploaded file based on the correct column names
+    m_values = data['m'].astype(float).values
+    n_values = data['n'].astype(float).values
+    p_values = data['p'].astype(float).values
+    q_values = data['q'].astype(float).values
+    V_values = data['V'].astype(float).values
+    velocity_vector = data['vel'].astype(float).values
 
     # Calculate matrices A, B, C, Z, pressure vector, and arctangent values
     matrix_A = []
@@ -81,7 +80,6 @@ if uploaded_file is not None:
     st.write("### Pressure Vector P (Real and Imaginary parts)")
     df_pressure_vector = pd.DataFrame({
         "Real Part of P": pressure_vector.real,
-        "Imaginary Part of P": pressure_vector
+        "Imaginary Part of P": pressure_vector.imag
     })
     st.write(df_pressure_vector)
-
