@@ -4,7 +4,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Title of the app
-st.title("Matrix Calculation and Chart Generator")
+st.title("Pressure Vector Calculator")
+
+# Short description using an expander for instructions
+with st.expander("How it works"):
+    st.write("""
+    This app allows you to:
+    
+    1. Upload a data spreadsheet.
+    2. Input a value for W.
+    3. Generate various matrices (A, B, C, Z) using provided formulas.
+    4. Calculate the pressure vector and plot the arctangent of the pressure terms.
+    
+    Once you upload the file and input the value for W, the app will automatically generate the necessary matrices and the chart.
+    """)
 
 # Step 1: User input for W
 W = st.number_input("Enter the value for W", min_value=1, value=1000, step=1)
