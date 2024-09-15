@@ -18,7 +18,7 @@ with st.expander("How it Works"):
     st.write("""
     This app allows you to:
     
-    1. Upload a data spreadsheet with values for Index, m, n, vel, p, q, and V.
+    1. Upload a data spreadsheet with values for Index, m, n, vel, p, q, and V. [Use this template.](https://docs.google.com/spreadsheets/d/1D34CbuFfUy6nIEUpFA-9VfIAh7TSj2IHWEO1xBO2upM/edit?usp=sharing)
     2. Input a value for W.
     3. The tool will generate various matrices (A, B, C, Z) using provided formulas, and calculate the pressure vector and plot the arctangent of the pressure terms.
     
