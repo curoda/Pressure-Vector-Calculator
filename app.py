@@ -7,14 +7,13 @@ import matplotlib.pyplot as plt
 st.title("Pressure Vector Calculator")
 
 # Short description using an expander for instructions
-with st.expander("Instructions"):
+with st.expander("How it Works"):
     st.write("""
     This app allows you to:
     
     1. Upload a data spreadsheet with values for Index, m, n, vel, p, q, and V.
     2. Input a value for W.
-    3. Generate various matrices (A, B, C, Z) using provided formulas.
-    4. Calculate the pressure vector and plot the arctangent of the pressure terms.
+    3. The tool will generate various matrices (A, B, C, Z) using provided formulas, and calculate the pressure vector and plot the arctangent of the pressure terms.
     
     Once you upload the file and input the value for W, the app will automatically generate the necessary matrices and the chart.
     """)
