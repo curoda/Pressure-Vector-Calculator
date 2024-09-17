@@ -36,6 +36,9 @@ if uploaded_file is not None:
     # Step 3: Read the uploaded spreadsheet
     data = pd.read_excel(uploaded_file, sheet_name='Sheet1')
 
+    # Clean up the column names
+    data.columns = data.columns.str.strip()
+
     # Extract the necessary columns from the uploaded file based on the correct column names
     m_values = data['m'].astype(float).values
     n_values = data['n'].astype(float).values
