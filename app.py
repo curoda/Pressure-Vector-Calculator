@@ -119,4 +119,4 @@ if uploaded_file is not None:
     except Exception as e:
         # Catch any exception and show the format error message
         show_format_error_message()
-        st.error(f"Error details: {str(e)}")  # Optional for debugging
+        # st.error(f"Error details: {str(e)}")  
